@@ -90,3 +90,28 @@ waitress-serve --listen=0.0.0.0:8080 predict:app
 ```sh
 python music_genre_predict.py
 ```
+
+### Containerization
+1. Install the Docker, and it's running on your machine now.
+2. Open the terminal and choose the project directory.
+3. Build docker image from Dockerfile using 
+```sh
+docker build -t predict-music-genre:latest .
+```
+With `-t` parameter we're specifying the tag name of our docker image. 
+
+3. Now use to run service
+```sh
+docker run --rm -it -p 8080:8080 -d  predict-music-genre:latest
+``` 
+command to launch the docker container with your app. 
+You can use the ID image instead of predict-music-genre:latest. 
+You can find ID image with command 
+```sh
+docker images
+```
+4. Run music_genre_predict.py to see prediction on given data.
+
+After that you will see following:
+
+<img src ="images/predict_with_docker.png" />
