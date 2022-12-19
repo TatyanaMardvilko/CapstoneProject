@@ -19,7 +19,7 @@ def predict():
     X = dv.transform([music])
     y_pred = model.predict(X)
     pred = LE.classes_[int(y_pred)]
-    print(pred)
+    print(f'music genre is {pred}')
     return jsonify(pred)
 
 
