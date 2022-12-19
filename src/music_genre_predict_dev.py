@@ -1,6 +1,6 @@
 import requests
 
-url = "http://localhost:8080/predict"
+url = "http://localhost:9696/predict"
 
 music = {
     "popularity": 66.0,
@@ -24,3 +24,8 @@ response = requests.post(url, json=music).json()
 
 
 print(response)
+
+
+
+
+
