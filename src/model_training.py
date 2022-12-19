@@ -40,7 +40,7 @@ Y_full_train = LE.fit_transform(y_full_train)
 
 test_dict = data_test.to_dict(orient='records')
 X_test = dv.transform(test_dict)
-Y_test = LE.fit_transform(y_test)
+Y_test = LE.transform(y_test)
 
 print('training the final model')
 
